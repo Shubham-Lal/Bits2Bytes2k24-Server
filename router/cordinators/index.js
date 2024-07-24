@@ -1,0 +1,1 @@
+// Same as in participants, but for cordinators routes
