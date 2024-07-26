@@ -15,8 +15,13 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(cors());
 
-const participantsRoutes = require('./routes/participants.js') ;
+// Participants routes
+const participantsRoutes = require('./routes/participants.js');
 app.use('/api/participants', participantsRoutes);
+
+// Coordinators routes
+const coordinatorsRoutes = require('./routes/coordinators.js');
+app.use('/api/coordinators', coordinatorsRoutes);
 
 app.use('/api/test', (req, res) => {
   res.send(`Hello from the server\n Directory is ${__dirname}`);

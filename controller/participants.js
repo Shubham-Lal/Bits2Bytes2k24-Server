@@ -1,10 +1,6 @@
-const { createClient } = require('@supabase/supabase-js')
+const supabase = require('../supabase.js')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-
-const supabaseUrl = process.env.SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
 
 module.exports.createUser = async (req, res) => {
   try {
